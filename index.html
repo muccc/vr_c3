@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <title>Sonnensystem Prototyp</title>
+    <meta name="description" content="Hello, WebVR! - A-Frame">
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+	</head>
+  <body>
+    <a-scene>
+	
+	<a-entity position="0 0 -100">
+	  <a-sphere src="sonne.jpeg" position="0 0 0" radius = "5" roughness="1"></a-sphere>
+      <a-animation attribute="rotation" dur="100000" fill="forwards" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
+      <a-entity light="type:point; castShadow: true; color: #FFF; intensity: 0.82" position="0 10 0"></a-entity>
+      <a-entity light="type:point; castShadow: true; color: #FFF; intensity: 0.82" position="0 -10 0"></a-entity>
+      <a-entity light="type:point; castShadow: true; color: #FFF; intensity: 0.82" position="0 0 10"></a-entity>
+      <a-entity light="type:point; castShadow: true; color: #FFF; intensity: 0.82" position="10 0 0"></a-entity>
+      <a-entity light="type:point; castShadow: true; color: #FFF; intensity: 0.82" position="-10 0 0"></a-entity>
+      <a-entity light="type:point; castShadow: true; color: #FFF; intensity: 0.82" position="0 0 -10"></a-entity>
+	
+    </a-entity>
+	
+	
+	<a-entity position="0 -5 -100">
+       
+	  <a-entity position="3 3 100" >
+		  <a-sphere src="erde.jpg" position="0 0 0" radius = "2.5" shadow="recieve: true" roughness="1">
+	       	       <a-animation attribute="rotation" 
+		                dur="4000" 
+						fill="forwards" 
+						to="0 360 0" 
+						repeat="indefinite" 
+						easing="linear">
+		     	   </a-animation>
+	       </a-sphere>	
+			 <a-sphere src="mond.jpg" position="30 0 0" radius="1.5" shadow="recieve: true" roughness="1">
+				 <a-animation attribute="rotation"
+	               dur="40000"
+	               fill="backwards"
+	               to="0 360 0"
+	               repeat="indefinite"
+				   easing="linear">
+				 </a-animation>
+	 	
+			 	</a-sphere>
+			 <a-animation attribute="rotation"
+	               dur="40000"
+	               fill="forwards"
+	               to="0 360 0"
+	               repeat="indefinite"
+				   easing="linear">
+			 </a-animation>
+		  </a-entity>
+	</a-entity>
+	
+	<a-sky color="#000"></a-sky>
+	  
+    </a-scene>
+  </body>
+</html>
+
