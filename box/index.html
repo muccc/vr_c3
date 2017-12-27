@@ -1,22 +1,25 @@
-<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<!-- By Ada Rose Edwards @lady_ada_king. -->
+<!DOCTYPE html>
+<html>
+  <head>
     <title>Vaporwave - A-Frame</title>
-    <meta name="description" content="Vaporwave aesthetic text By Ada Rose Edwards (@lady_ada_king)." />
+    <meta name="description" content="Vaporwave aesthetic text By Ada Rose Edwards (@lady_ada_king).">
     <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-text-geometry-component@0.5.1/dist/aframe-text-geometry-component.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script><link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto%7CRoboto+Mono" media="all" /><script>WebFont.load({google: {families: ["Roboto", "Roboto Mono"]}});</script></head>
+  </head>
   <body>
-    <a-scene class="fullscreen" canvas="" inspector="url:https://unpkg.com/aframe-inspector@0.5.x/dist/aframe-inspector.min.js" keyboard-shortcuts="enterVR:true;exitVR:true;resetSensor:true" screenshot="width:4096;height:2048" vr-mode-ui="enabled:true" auto-enter-vr="display:GearVR;enabled:true">
+    <a-scene>
     <a-assets>
         <img id="pink" src="https://img.gs/bbdkhfbzkk/stretch/http://i.imgur.com/1hyyIUi.jpg" crossorigin="anonymous" />
         <img src="https://img.gs/bbdkhfbzkk/stretch/https://i.imgur.com/25P1geh.png" id="grid" crossorigin="anonymous" />
         <img src="https://img.gs/bbdkhfbzkk/2048x1024,stretch/http://i.imgur.com/WMNH2OF.jpg" id="chrome" crossorigin="anonymous" />
-        <img id="sky" src="box.jpg" crossorigin="anonymous" />
+        <img id="sky" src="https://img.gs/bbdkhfbzkk/2048x2048,stretch/http://i.imgur.com/WqlqEkq.jpg" crossorigin="anonymous" />
         <a-asset-item id="dawningFont" src="https://cdn.glitch.com/c719c986-c0c5-48b8-967c-3cd8b8aa17f3%2FdawningOfANewDayRegular.typeface.json?1490305922844"></a-asset-item>
         <a-asset-item id="exoFont" src="https://cdn.glitch.com/c719c986-c0c5-48b8-967c-3cd8b8aa17f3%2Fexo2Black.typeface.json?1490305922150"></a-asset-item>
         <a-asset-item id="exoItalicFont" src="https://cdn.glitch.com/c719c986-c0c5-48b8-967c-3cd8b8aa17f3%2Fexo2BlackItalic.typeface.json?1490305922725"></a-asset-item>
       </a-assets>
       
-      <a-entity src="https://cdn.glitch.com/18f86cca-1db4-4751-b1ba-5a4911962b00%2Fuc3logo.svg?1514386107818" position="0 4.991 -6.768" rotation="0 0 317.112805536945" scale="3 3 3" visible="true" material="src:https://cdn.glitch.com/18f86cca-1db4-4751-b1ba-5a4911962b00%2Fuc3logo.svg?1514386107818;transparent:true" geometry="primitive:plane">
+      <a-entity src="https://cdn.glitch.com/18f86cca-1db4-4751-b1ba-5a4911962b00%2Fuc3logo.svg?1514386107818" position="0 4.991 -6.768" rotation="0 0 308.055" scale="3 3 3" visible="true" material="src:https://cdn.glitch.com/18f86cca-1db4-4751-b1ba-5a4911962b00%2Fuc3logo.svg?1514386107818;transparent:true" geometry="primitive:plane">
         <a-animation easing="linear" attribute="rotation" dur="10000" to="0 0 360" repeat="indefinite"></a-animation>
       </a-entity>
 
@@ -33,7 +36,9 @@
       <a-entity light="color:white;intensity:0.5" position="-5 5 15" rotation="0 0 0" scale="1 1 1" visible="true"></a-entity>
       <a-entity light="color:white;type:ambient" position="0 0 0" rotation="0 0 0" scale="1 1 1" visible="true"></a-entity>
 
-      <a-sky src="#sky" rotation="0 -90 0" position="0 0 0" scale="-1 1 1" visible="true" material="color:#FFF;shader:flat;src:#sky" geometry="primitive:sphere;radius:5000;segmentsWidth:64;segmentsHeight:20"></a-sky>
-    <canvas class="a-canvas a-grab-cursor" data-aframe-canvas="true" width="1920" height="988" style="width: 1920px; height: 988px;"></canvas><a-entity camera="far:10000;fov:50;near:0.05;active:true" position="0 0 0" rotation="0 0 0" scale="1 1 1" visible="true"></a-entity></a-scene>
-  
-</body></html>
+      <a-sky src="#sky" rotation="0 -90 0"></a-sky>
+    </a-scene>
+  </body>
+</html>
+    
+
