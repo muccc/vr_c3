@@ -13,8 +13,10 @@
 	</head>
   <body>
   	<a-scene>
+  		<a-entity id="teleHand" hand-controls="left" teleport-controls="type: parabolic; collisionEntities: [mixin='voxel'], #ground"></a-entity>
+  		
   		<a-entity position="0 1.6 -291.8">
-			<a-entity id="teleHand" hand-controls="left" teleport-controls="type: parabolic; collisionEntities: [mixin='voxel'], #ground"></a-entity>
+			
 
   			<a-sphere src="sonne.jpeg" position="0 0 0" radius = "1.359" roughness="1"></a-sphere>
   			<a-entity light="type:point; castShadow: true; color: #FFF; intensity: 1" position="0 10 0"></a-entity>
