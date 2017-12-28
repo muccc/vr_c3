@@ -3,10 +3,16 @@
   <head> 
     <title>aframe.io moon demo</title>
     <meta name="description" content="An aframe.io demonstration of the moon.">
-    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
 	</head>
   <body>
   	<a-scene>
+  		<a-locomotor horizontal-only="false">
+      		<a-entity hand-controls="left" super-hands></a-entity>
+      		<a-entity hand-controls="right" super-hands></a-entity>
+    	</a-locomotor>
+  
+  
   		<a-entity position="0 1.6 -291.8">
   			<a-sphere src="sonne.jpeg" position="0 0 0" radius = "1.359" roughness="1"></a-sphere>
   			<a-entity light="type:point; castShadow: true; color: #FFF; intensity: 1" position="0 10 0"></a-entity>
