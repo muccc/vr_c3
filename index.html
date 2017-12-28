@@ -4,16 +4,18 @@
     <title>aframe.io moon demo</title>
     <meta name="description" content="An aframe.io demonstration of the moon.">
     <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
-    <script src="https://unpkg.com/super-hands@2.1.0/dist/super-hands.min.js"></script>
+
+	<script src="https://unpkg.com/aframe-teleport-controls@0.2.x/dist/aframe-teleport-controls.min.js"></script>
+	<script src="https://unpkg.com/aframe-controller-cursor-component@0.2.x/dist/aframe-controller-cursor-component.min.js"></script>
+
+
+
 	</head>
   <body>
   	<a-scene>
-  		<a-locomotor horizontal-only="false">
-      		<a-entity hand-controls="left" super-hands></a-entity>
-      		<a-entity hand-controls="right" super-hands></a-entity>
-    	</a-locomotor>
-  
   		<a-entity position="0 1.6 -291.8">
+			<a-entity id="teleHand" hand-controls="left" teleport-controls="type: parabolic; collisionEntities: [mixin='voxel'], #ground"></a-entity>
+
   			<a-sphere src="sonne.jpeg" position="0 0 0" radius = "1.359" roughness="1"></a-sphere>
   			<a-entity light="type:point; castShadow: true; color: #FFF; intensity: 1" position="0 10 0"></a-entity>
   			<a-entity light="type:point; castShadow: true; color: #FFF; intensity: 1" position="0 -10 0"></a-entity>
